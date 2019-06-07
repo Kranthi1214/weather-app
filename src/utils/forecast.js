@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback)=>{
             callback("unable to fetch the foracast", undefined)
         }else{
             const {temperature, precipProbability}=body.currently
-            callback(undefined,"It is currently"+" "+ temperature+" out. There is a "+ precipProbability +" % chance of rain.")
+            callback(undefined,"It is currently "+ temperature+" out.The high today is "+body.daily.data[0]. temperatureHigh +"the low is"+body.daily.data[0]. temperatureLow +"There is a "+ precipProbability +" % chance of rain.")
         }
     })
 
